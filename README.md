@@ -2,11 +2,20 @@
 
 El presente proyecto se usará para el curso de Angular 8. Todo el proyecto será comentado y se irán añadiendo ramas con las direfentes partes tratadas. La siguiente documentación será complementaria a la formación para seguir la lógica de trabajo de este proyecto:
 
-https://drive.google.com/drive/folders/1f2fCOaUxu4Vf8hmdLTPMdZRqQkiqwCrM?usp=sharing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+[Proyecto en Drive](https://drive.google.com/drive/folders/1f2fCOaUxu4Vf8hmdLTPMdZRqQkiqwCrM?usp=sharing)
+
+## App apoyo
+
+En la app encontrarás retos para asentar los conocimientos aprendidos en clase. Deberás registrarte y acceder al juego **Framework de Desarrollo Web** para poder ver el listado de retos.
+
+[Android](https://play.google.com/store/apps/details?id=es.centic.gamification&hl=es_419)
+
+[Apple](https://itunes.apple.com/us/app/centic-gaming/id1220399433?l=es&ls=1&mt=8)
 
 ## Development server
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
