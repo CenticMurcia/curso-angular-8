@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FirstServiceService } from '../first-service.service';
-import { Region, InformationRegionsList } from '../interfaces/region';
+import { FirstServiceService } from '../../first-service.service';
+import { Region, InformationRegionsList } from '../../interfaces/region';
 
 @Component({
   selector: 'app-three',

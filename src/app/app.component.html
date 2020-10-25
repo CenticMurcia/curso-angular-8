@@ -1,11 +1,23 @@
-<!-- Etiqueta HTML de ejemplo-->
+<!-- Etiqueta HTML de ejemplo
 <h1>Hola Mundo!!!!!!!!!!!!!!!!</h1>
 
-<!-- Etiqueta de nuestro componente 'first-component', todo el código que implementemos en ese componente se verá reflejado en esta etiqueta -->
+Etiqueta de nuestro componente 'first-component', todo el código que implementemos en ese componente se verá reflejado en esta etiqueta 
 <app-first-component></app-first-component>
 
-<!-- Etiqueta de nuestro componente 'second' -->
+Etiqueta de nuestro componente 'second' 
 <app-second></app-second>
 
-<!-- Etiqueta del componente 'three' -->
-<app-three></app-three>
+Etiqueta del componente 'three' 
+<app-three></app-three> -->
+
+<h2>Menú navegación</h2>
+
+<ul>
+    <li routerLink="/first">First Component</li>
+    <li (click)="goToSecond()">Second Component</li>
+    <li routerLink="/third">Third Component</li>
+</ul>
+
+<!-- Etiqueta de Angular para mostrar cada uno de los componentes que hemos añadido al archivo routing, con esta etiqueta Angular reconoce que 
+tiene que mostrar aquí cada componente por el que vayamos navegando -->
+<router-outlet></router-outlet>
