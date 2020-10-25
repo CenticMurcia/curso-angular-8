@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './first-component/first-component.component';
 import { SecondComponent } from './second/second.component';
+import { ThreeComponent } from './three/three.component';
 
 @NgModule({
   /** Aqui declaramos los componentes que vayamos a utilizar */
   declarations: [
     AppComponent,
     FirstComponentComponent,
-    SecondComponent
+    SecondComponent,
+    ThreeComponent
   ],
   /** Importamos los modulos de Angular necesarios */
   imports: [
