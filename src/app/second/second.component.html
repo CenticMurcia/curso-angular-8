@@ -1,1 +1,13 @@
 <p>second works!</p>
+
+<!-- Ejemplo directiva *ngFor donde se muestra el resultado de nuestro array -->
+<ul>
+    <li *ngFor="let name of arrayNames">
+        <span>{{ name }}</span>
+    </li>
+</ul>
+
+<!-- Ejemplo directiva *ngIf donde dependiendo del valor del boolean showMessage se mostrará la etiqueta <p> o no -->
+<button (click)="toggleMessage()" >Muestra/Oculta mensaje</button>
+
+<p *ngIf="showMessage">Texto mensaje componente Second!</p>
