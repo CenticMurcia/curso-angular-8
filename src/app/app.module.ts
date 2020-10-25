@@ -4,6 +4,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 /** Cargaremos  todos los componentes, servicios y otros archivos que necesitemos de nuestro proyecto */
 import { AppComponent } from './app.component';
@@ -22,7 +23,8 @@ import { ThreeComponent } from './three/three.component';
   /** Importamos los modulos de Angular necesarios */
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   /** Cargamos todos los servicios que queramos a utilizar en toda la app y que no tengan el 'provideIn: "root"' */
   providers: [],

@@ -1,1 +1,14 @@
 <p>three works!</p>
+
+<table style="width: 80%;">
+    <tr>
+        <th>Nombre</th>
+        <th>Id</th>
+    </tr>
+    
+    <!-- Simple ngFor que repetirá tantas filas como datos contenga regionsArray -->
+    <tr *ngFor="let region of regionsArray">
+        <td>{{ region.name }}</td>
+        <td>{{ region.id }}</td>
+    </tr>
+</table>
