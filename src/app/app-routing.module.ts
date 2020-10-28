@@ -6,6 +6,7 @@ import { SecondComponent } from './components/second/second.component';
 import { ThreeComponent } from './components/three/three.component';
 import { FourthComponent } from './components/fourth/fourth.component';
 import { SaludarComponent } from './exercises/arquitectura-angular/components/saludar/saludar.component';
+import { ExampleOneFatherComponent } from './components/example-one-father/example-one-father.component';
 
 /**
  * Objeto con todas las rutas que vamos a crear para nuestra aplicación
@@ -17,6 +18,7 @@ const routes: Routes = [
   // Ejemplo de ruta con parámetros. Para definir un parámetro tan solo debemos añadir ':' delante del nombre del parámetro
   { path: 'fourth/:id', component: FourthComponent},
   { path: 'exercises/arquitectura', component: SaludarComponent},
+  { path: 'exampleInput', component: ExampleOneFatherComponent},
 
   // Ruta por defecto donde redirigirá a la que hayamos colocado, importante no olvidar '/' en el nombre de la ruta y 'pathMatch: "full"'
   {path: '', redirectTo: '/first', pathMatch: 'full'},
