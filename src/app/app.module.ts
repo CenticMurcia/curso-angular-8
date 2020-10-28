@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+/** Módulos que nosotros creemos como por ejemplo el módulo de rutas u otros submodulos */
 import { AppRoutingModule } from './app-routing.module';
 
 /** Cargaremos  todos los componentes, servicios y otros archivos que necesitemos de nuestro proyecto */
@@ -14,6 +15,8 @@ import { FirstComponentComponent } from './components/first-component/first-comp
 import { SecondComponent } from './components/second/second.component';
 import { ThreeComponent } from './components/three/three.component';
 import { FourthComponent } from './components/fourth/fourth.component';
+import { SaludarComponent } from './exercises/arquitectura-angular/components/saludar/saludar.component';
+import { InfoGithubComponent } from './exercises/arquitectura-angular/components/info-github/info-github.component';
 
 @NgModule({
   /** Aqui declaramos los componentes que vayamos a utilizar */
@@ -22,9 +25,11 @@ import { FourthComponent } from './components/fourth/fourth.component';
     FirstComponentComponent,
     SecondComponent,
     ThreeComponent,
-    FourthComponent
+    FourthComponent,
+    SaludarComponent,
+    InfoGithubComponent
   ],
-  /** Importamos los modulos de Angular necesarios */
+  /** Importamos los modulos de Angular necesarios, incluido los submódulos que creemos nosotros */
   imports: [
     BrowserModule,
     FormsModule,
