@@ -10,7 +10,8 @@ export class FourthComponent implements OnInit {
 
   public idRandom: number;
 
-  constructor(private activatedRoute: ActivatedRoute) { 
+  constructor(private activatedRoute: ActivatedRoute) {
+    /** Función que tiene Angular para recuperar los parámetros de SU enrutado */
     this.activatedRoute.params.subscribe( params => {
       this.idRandom = +params.id;
     });

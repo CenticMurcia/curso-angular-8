@@ -1,0 +1,10 @@
+<h3>Enviar un saludo a:</h3>
+<input type="text" [(ngModel)]="username">
+
+<button (click)="saludar()">Saludar</button>
+
+<br>
+
+<button (click)="toggleComponent()">Mostrar/ocultar componente</button>
+
+<app-info-github *ngIf="showComponent"></app-info-github>
