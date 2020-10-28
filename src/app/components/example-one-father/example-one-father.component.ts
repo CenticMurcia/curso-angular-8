@@ -10,10 +10,19 @@ export class ExampleOneFatherComponent implements OnInit {
   // Atributos de la clase ExampleOneFather
   public name: string;
   public lastName: string;
+  public myNumber: number;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public showAlert(): void {
+    alert(`Bienvenido ${ this.name } ${ this.lastName }!!`);
+  }
+
+  public calculate(valueCalculate: number): void {
+    this.myNumber = valueCalculate;
   }
 
 }
