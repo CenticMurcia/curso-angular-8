@@ -19,8 +19,8 @@ export class FirstComponentComponent implements OnInit {
    * Método que se lanza cuando se crea una instancia del componente.
    */
   ngOnInit() {
-    this.variable1 = "Curso de framework web";
-    this.imageSrc = "https://gaming.centic.ovh/files/matchs/image_square_p2iionP.png";
+    this.variable1 = 'Curso de framework web';
+    this.imageSrc = 'https://gaming.centic.ovh/files/matchs/image_square_p2iionP.png';
   }
 
   /**
@@ -28,11 +28,17 @@ export class FirstComponentComponent implements OnInit {
    */
 
   public devuelveCurso(): string {
-    return "Curso de Angular 8";
+    return 'Curso de Angular 8';
   }
 
   public saludar(): void {
-    alert("Saludando!!");
+    alert('Saludando!!');
+  }
+
+  public showDataPhone(phone: number): void {
+    if (phone) {
+      alert(`Teléfono a enviar: ${ phone }`);
+    }
   }
 
 }

@@ -1,19 +1,32 @@
 <p>first-component works!!!!!!!!!</p>
 
+<h4>One Data-Binding con un atributo</h4>
 <!-- One data-binding; mostramos el valor del atributo 'variable1' dentro de la etiqueta <p> -->
 <p>{{ variable1 }}</p>
 
+<h4>One Data-Binding con un método</h4>
 <!-- Al igual que un atributo del componente, un método es ejecutado cuando es leido en el HTML, si ese método devuelve algún valor este se muestra en el HTML como un string -->
 <p>{{ devuelveCurso() }}</p>
 
+<h4>One Data-Binding de atributo de una etiqueta HTML</h4>
 <!-- También podemos realizar el binding con atributos de una etiqueta de HTML, en este ejemplo le dará el valor de imageSrc al atributo src de esta etiqueta.
     Podemos usar también esta opción -> src="{{ imageSrc }} el resultado sería el mismo pero es recomendable la opción del ejemplo -->
 <img [src]="imageSrc">
 
+<h4>One Data-Binding de eventos</h4>
 <!-- One data-binding en eventos. Angular tiene su forma nombrar los eventos en una plantilla, para mas información ver la documentación. En este ejemplo realizamos un 
     evento de click sobre un botón y ejecutamos un método de nuestro componente. -->
 <button (click)="saludar()">Haz click!!</button>
+<br>
 
+<h4>Doble Data-Binding con NgModel</h4>
 <!-- Doble Data-Binding. A diferencía de los anteriores aquí el atributo [(ngModel)] puede modificar el valor del atributo del componente pero a la vez también está a la espera
     de posibles cambios que puedan realizarse en el componente y mostrarlos en el HTML-->
 <input [(ngModel)]="variable1" type="text">
+<br>
+
+<h4>Variable #Var</h4>
+<!-- Ejemplo de como podemos convertir una etiqueta HTML en una 'variable' y trabajar con ella en el propio HTML -->
+<input #phone placeholder="numero de telefono" type="number" >
+<br>
+<button (click)="showDataPhone(phone.value)">Enviar tel&eacute;fono</button>
