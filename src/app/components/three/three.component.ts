@@ -11,12 +11,14 @@ import { Region, InformationRegionsList } from '../../interfaces/region';
 export class ThreeComponent implements OnInit {
 
   public regionsArray: Array<Region>;
+  public date: Date;
 
   /**
    * Todo lo que pase por el inyector de dependencias deberá inicializarse en el constructor
    */
   constructor(private firstService: FirstServiceService) {
     this.regionsArray = [];
+    this.date = new Date();
   }
 
   ngOnInit() {

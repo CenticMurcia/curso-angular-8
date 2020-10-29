@@ -1,5 +1,9 @@
 <p>three works!</p>
 
+<input [(ngModel)]="date" type="date">
+
+<p>Valor despu&eacute;s del pipe: {{ date | date:'longDate' }}</p>
+
 <table style="width: 80%;">
     <tr>
         <th>Nombre</th>
@@ -8,7 +12,8 @@
     
     <!-- Simple ngFor que repetirá tantas filas como datos contenga regionsArray -->
     <tr *ngFor="let region of regionsArray">
-        <td>{{ region.name }}</td>
+        <!-- Como se obserba la forma de aplicar un pipe es después del simbolo '|' -->
+        <td>{{ region.name | uppercase }}</td>
         <td>{{ region.id }}</td>
     </tr>
 </table>
