@@ -5,22 +5,22 @@
 
 <!-- Formulario tipo Template-driven -->
 <form (ngSubmit)="login()" #loginForm="ngForm">
-    <div class="form-group">
+    <div >
         <label for="username">Nombre:</label>
-        <input type="text" [(ngModel)]="username" class="form-control" name="username" #name="ngModel" required>
+        <input type="text" [(ngModel)]="username"  name="username" #name="ngModel" required>
         <div *ngIf="name.invalid && name.dirty" class="alert alert-danger">
             <div *ngIf="name.errors.required">Nombre obligatorio</div>
         </div>
     </div>
 
-    <div class="form-group">
+    <div >
         <label for="pwd">Contraseña:</label>
-        <input type="password" [(ngModel)]="pwd" class="form-control" name="pwd" #password="ngModel" required minlength="4">
+        <input type="password" [(ngModel)]="pwd"  name="pwd" #password="ngModel" required minlength="4">
         <div *ngIf="password.invalid && password.dirty" class="alert alert-danger">
             <div *ngIf="password.errors.required">Contraseña obligatorio</div>
             <div *ngIf="password.errors.minlength">Contraseña mínima de 4 caractéres</div>
         </div>
     </div>
 
-    <button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Enviar</button>
+    <button type="submit" [disabled]="!loginForm.form.valid">Enviar</button>
 </form>
