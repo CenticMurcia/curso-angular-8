@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
     if (this.username.trim().length > 0 && this.pwd.trim().length > 0) {
       alert('Login realizado correctamente');
 
+      /** En esa posible respuesta del servidor al realizar el login podriamos guardar el token en un localStorage o sessionStorage */
       sessionStorage.setItem('exampleToken', uuidv4());
 
       this.router.navigate(['/dashboard']);
