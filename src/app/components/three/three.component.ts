@@ -33,9 +33,9 @@ export class ThreeComponent implements OnInit {
    */
   private loadDataAPI(): void {
     this.firstService.getInfoAPI().subscribe(
-      (response: InformationRegionsList) => {
+      (response: Region[]) => {
 
-        this.regionsArray = response[1];
+        this.regionsArray = response;
 
       },
       (error) => {
