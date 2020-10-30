@@ -20,7 +20,12 @@ const routes: Routes = [
   { path: 'fourth/:id', component: FourthComponent},
   { path: 'exercises/arquitectura', component: SaludarComponent},
   { path: 'exampleInput', component: ExampleOneFatherComponent},
+  /**
+   * Ruta para acceder al submódulo que se ha creado.
+   * De esta forma Angular detectará el módulo y las posibles rutas que tenga en él
+   */
   { path: 'container', loadChildren: () => import('./components/container/container.module').then((m) => m.ContainerModule)},
+  { path: 'dashboard', loadChildren: () => import('./components/dashboard/dashboard.module').then((m) => m.DashboardModule)},
 
   // Ruta por defecto donde redirigirá a la que hayamos colocado, importante no olvidar '/' en el nombre de la ruta y 'pathMatch: "full"'
   {path: '', redirectTo: '/first', pathMatch: 'full'},

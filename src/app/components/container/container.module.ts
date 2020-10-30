@@ -13,6 +13,9 @@ import { ShareDataService } from '../../services/share-data.service';
   declarations: [ ContainerComponent, ComponentThreeComponent, ComponentOneComponent, ComponentTwoComponent],
   imports: [
     CommonModule,
+    /** Debemos crear subrutas para poder acceder a los componentes de este sub-módulo. Importante que para el app.module.ts se utiliza
+     * Router.Module.forRoot() pero en los sub-módulos con rutas debemos usar el siguiente con .forChild()
+     */
     RouterModule.forChild([
       { path: '', component: ContainerComponent}
     ])
