@@ -20,8 +20,6 @@ import { InfoGithubComponent } from './exercises/arquitectura-angular/components
 import { ExampleOneFatherComponent } from './components/example-one-father/example-one-father.component';
 import { ExampleOneChildComponent } from './components/example-one-father/example-one-child/example-one-child.component';
 import { ContainerComponent } from './components/container/container.component';
-import { ComponentOneComponent } from './components/container/component-one/component-one.component';
-import { ComponentTwoComponent } from './components/container/component-two/component-two.component';
 
 @NgModule({
   /** Aqui declaramos los componentes que vayamos a utilizar */
@@ -34,10 +32,7 @@ import { ComponentTwoComponent } from './components/container/component-two/comp
     SaludarComponent,
     InfoGithubComponent,
     ExampleOneFatherComponent,
-    ExampleOneChildComponent,
-    ContainerComponent,
-    ComponentOneComponent,
-    ComponentTwoComponent
+    ExampleOneChildComponent
   ],
   /** Importamos los modulos de Angular necesarios, incluido los submódulos que creemos nosotros */
   imports: [

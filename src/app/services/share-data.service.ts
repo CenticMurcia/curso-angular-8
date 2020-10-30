@@ -7,9 +7,7 @@ import { Subject } from 'rxjs';
  * 2 -> El atributo con el $ es el intermediario para recuperar ese valor, es como el método get de una clase en java por ejemplo
  * 3 -> Un método para cambiar el valor del atributo, como el set de java por seguir con el ejemplo.
  */
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ShareDataService {
 
   /**

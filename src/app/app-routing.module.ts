@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'fourth/:id', component: FourthComponent},
   { path: 'exercises/arquitectura', component: SaludarComponent},
   { path: 'exampleInput', component: ExampleOneFatherComponent},
-  { path: 'container', component: ContainerComponent},
+  { path: 'container', loadChildren: () => import('./components/container/container.module').then((m) => m.ContainerModule)},
 
   // Ruta por defecto donde redirigirá a la que hayamos colocado, importante no olvidar '/' en el nombre de la ruta y 'pathMatch: "full"'
   {path: '', redirectTo: '/first', pathMatch: 'full'},
