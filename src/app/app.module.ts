@@ -15,6 +15,11 @@ import { FirstComponentComponent } from './components/first-component/first-comp
 import { SecondComponent } from './components/second/second.component';
 import { ThreeComponent } from './components/three/three.component';
 import { FourthComponent } from './components/fourth/fourth.component';
+import { ExampleOneFatherComponent } from './components/example-one-father/example-one-father.component';
+import { ExampleOneChildComponent } from './components/example-one-father/example-one-child/example-one-child.component';
+import { ContainerComponent } from './components/container/container.component';
+import { ComponentOneComponent } from './components/container/component-one/component-one.component';
+import { ComponentTwoComponent } from './components/container/component-two/component-two.component';
 
 @NgModule({
   /** Aqui declaramos los componentes que vayamos a utilizar */
@@ -23,7 +28,13 @@ import { FourthComponent } from './components/fourth/fourth.component';
     FirstComponentComponent,
     SecondComponent,
     ThreeComponent,
-    FourthComponent
+    FourthComponent,
+    FourthComponent,
+    ExampleOneFatherComponent,
+    ExampleOneChildComponent,
+    ContainerComponent,
+    ComponentOneComponent,
+    ComponentTwoComponent
   ],
   /** Importamos los modulos de Angular necesarios, incluido los submódulos que creemos nosotros */
   imports: [

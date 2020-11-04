@@ -1,0 +1,16 @@
+<p>example-one-father works!</p>
+
+<!-- Añadimos valor a los atributos del componente a través de los inputs -->
+<h4>Nombre:</h4>
+<input type="text" [(ngModel)]="name">
+
+<h4>Apellido:</h4>
+<input type="text" [(ngModel)]="lastName">
+
+<!-- Los atributos de la etiqueta del componente ExampleOneChild enlazarán con los atributos del componente. Por lo 
+    que por ejemplo [username]="name" indica que el atributo username del componente ExampleOneChild tendrá el valor 
+    del atributo name del componente ExampleOneFather -->
+<app-example-one-child [username]="name" [lastName]="lastName" (onShowAlert)="showAlert()" (onCalculate)="calculate($event)"></app-example-one-child>
+
+<h4>Valor del evento onCalculate:</h4>
+<p>{{ myNumber }}</p>
