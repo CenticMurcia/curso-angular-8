@@ -10,20 +10,37 @@ Etiqueta de nuestro componente 'second'
 Etiqueta del componente 'three' 
 <app-three></app-three> -->
 
-<h2>Menú navegación</h2>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Menú Navegación</p>
 
-<ul>
-    <li routerLink="/first">First Component</li>
-    <li (click)="goToSecond()">Second Component</li>
-    <li routerLink="/third">Third Component</li>
-    <li (click)="goToFourth()">Fourth Component</li>
-    <li routerLink="/exercises">Ejercicios</li>
-    <li routerLink="/exampleInput">Ejemplo Padre-Hijo con Input</li>
-    <li routerLink="/container">Ejemplo comunicación entre componentes con servicios</li>
-    <li routerLink="/dashboard">Ejemplo rutas anidadas</li>
-    <li routerLink="/reactive-form">Formulario reactivo</li>
-</ul>
+        <mat-list role="list">
+            <mat-list-item role="listitem" routerLink="/first">First Component</mat-list-item>
+            <mat-list-item role="listitem" (click)="goToSecond()">Second Component</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/third">Third Component</mat-list-item>
+            <mat-list-item role="listitem" (click)="goToFourth()">Fourth Component</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/exercises">Ejercicios</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/exampleInput">Ejemplo Padre-Hijo con Input</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/container">Ejemplo comunicación entre componentes con servicios</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/dashboard">Ejemplo rutas anidadas</mat-list-item>
+            <mat-list-item role="listitem" routerLink="/reactive-form">Formulario reactivo</mat-list-item>
+        </mat-list>
+    </mat-drawer>
 
-<!-- Etiqueta de Angular para mostrar cada uno de los componentes que hemos añadido al archivo routing, con esta etiqueta Angular reconoce que 
-tiene que mostrar aquí cada componente por el que vayamos navegando -->
-<router-outlet></router-outlet>
+    <div class="example-sidenav-content" style="height: 100%;">
+        <p>
+            <mat-toolbar color="primary">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>Curso Angular 8</span>
+                <span class="example-spacer"></span>
+            </mat-toolbar>
+
+            <!-- Etiqueta de Angular para mostrar cada uno de los componentes que hemos añadido al archivo routing, con esta etiqueta Angular reconoce que 
+                tiene que mostrar aquí cada componente por el que vayamos navegando -->
+            <router-outlet></router-outlet>
+        </p>
+    </div>
+
+</mat-drawer-container>

@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /** Módulos que nosotros creemos como por ejemplo el módulo de rutas u otros submodulos */
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,8 @@ import { FourthComponent } from './components/fourth/fourth.component';
 import { ExampleOneFatherComponent } from './components/example-one-father/example-one-father.component';
 import { ExampleOneChildComponent } from './components/example-one-father/example-one-child/example-one-child.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+
+import { MaterialModule } from './material.module';
 
 @NgModule({
   /** Aqui declaramos los componentes que vayamos a utilizar */
@@ -38,7 +41,9 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   /** Cargamos todos los servicios que queramos a utilizar en toda la app y que no tengan el 'provideIn: "root"' */
   providers: [],
