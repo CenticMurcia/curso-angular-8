@@ -17,7 +17,6 @@ import { ThreeComponent } from './components/three/three.component';
 import { FourthComponent } from './components/fourth/fourth.component';
 import { ExampleOneFatherComponent } from './components/example-one-father/example-one-father.component';
 import { ExampleOneChildComponent } from './components/example-one-father/example-one-child/example-one-child.component';
-import { ContainerComponent } from './components/container/container.component';
 
 @NgModule({
   /** Aqui declaramos los componentes que vayamos a utilizar */
