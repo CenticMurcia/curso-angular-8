@@ -15,8 +15,6 @@ import { FirstComponentComponent } from './components/first-component/first-comp
 import { SecondComponent } from './components/second/second.component';
 import { ThreeComponent } from './components/three/three.component';
 import { FourthComponent } from './components/fourth/fourth.component';
-import { SaludarComponent } from './exercises/arquitectura-angular/components/saludar/saludar.component';
-import { InfoGithubComponent } from './exercises/arquitectura-angular/components/info-github/info-github.component';
 
 @NgModule({
   /** Aqui declaramos los componentes que vayamos a utilizar */
@@ -25,9 +23,7 @@ import { InfoGithubComponent } from './exercises/arquitectura-angular/components
     FirstComponentComponent,
     SecondComponent,
     ThreeComponent,
-    FourthComponent,
-    SaludarComponent,
-    InfoGithubComponent
+    FourthComponent
   ],
   /** Importamos los modulos de Angular necesarios, incluido los submódulos que creemos nosotros */
   imports: [

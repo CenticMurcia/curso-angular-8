@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'third', component: ThreeComponent},
   // Ejemplo de ruta con parámetros. Para definir un parámetro tan solo debemos añadir ':' delante del nombre del parámetro
   { path: 'fourth/:id', component: FourthComponent},
-  { path: 'exercises/arquitectura', component: SaludarComponent},
+  { path: 'exercises', loadChildren: () => import('./exercises/exercises.module').then((m) => m.ExercisesModule)},
 
   // Ruta por defecto donde redirigirá a la que hayamos colocado, importante no olvidar '/' en el nombre de la ruta y 'pathMatch: "full"'
   {path: '', redirectTo: '/first', pathMatch: 'full'},

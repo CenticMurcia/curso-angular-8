@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +11,7 @@ export class SaludarComponent implements OnInit {
   public username: string;
   public showComponent: boolean;
 
-  constructor() {
+  constructor(private location: Location) {
     this.showComponent = false;
   }
 
@@ -28,5 +29,7 @@ export class SaludarComponent implements OnInit {
       this.showComponent = true;
     }
   }
+
+  public goBack() { this.location.back(); }
 
 }
