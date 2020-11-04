@@ -15,8 +15,6 @@ import { FirstComponentComponent } from './components/first-component/first-comp
 import { SecondComponent } from './components/second/second.component';
 import { ThreeComponent } from './components/three/three.component';
 import { FourthComponent } from './components/fourth/fourth.component';
-import { SaludarComponent } from './exercises/arquitectura-angular/components/saludar/saludar.component';
-import { InfoGithubComponent } from './exercises/arquitectura-angular/components/info-github/info-github.component';
 import { ExampleOneFatherComponent } from './components/example-one-father/example-one-father.component';
 import { ExampleOneChildComponent } from './components/example-one-father/example-one-child/example-one-child.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
@@ -29,8 +27,7 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
     SecondComponent,
     ThreeComponent,
     FourthComponent,
-    SaludarComponent,
-    InfoGithubComponent,
+    FourthComponent,
     ExampleOneFatherComponent,
     ExampleOneChildComponent,
     ReactiveFormComponent
