@@ -2,10 +2,16 @@
  *    Aquí cargaremos las librerias/modulos de Angular que necesitemos para trabajar en el proyecto.
  */
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/** Registramos el idioma español por defecto en nuestra app para trabajar con las fechas en castellano,
+ * defecto están en inglés
+ */
+import localEs from '@angular/common/locales/es';
+registerLocaleData(localEs, 'es');
 
 /** Módulos que nosotros creemos como por ejemplo el módulo de rutas u otros submodulos */
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +25,7 @@ import { FourthComponent } from './components/fourth/fourth.component';
 import { ExampleOneFatherComponent } from './components/example-one-father/example-one-father.component';
 import { ExampleOneChildComponent } from './components/example-one-father/example-one-child/example-one-child.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { registerLocaleData } from '@angular/common';
 
 import { MaterialModule } from './material.module';
 
@@ -46,7 +53,9 @@ import { MaterialModule } from './material.module';
     MaterialModule
   ],
   /** Cargamos todos los servicios que queramos a utilizar en toda la app y que no tengan el 'provideIn: "root"' */
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es'}
+  ],
   /** Este metadato apenas se modifica, nos indica el componente de enlace */
   bootstrap: [AppComponent]
 })
