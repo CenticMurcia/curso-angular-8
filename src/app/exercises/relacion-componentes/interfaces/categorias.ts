@@ -9,4 +9,5 @@ export interface Categoria {
 
 export interface Palabra {
     name: string;
+    date: number;
 }

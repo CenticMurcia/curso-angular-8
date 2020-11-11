@@ -11,6 +11,6 @@ export class CategoriasService {
 
   public getCategorias(): Observable<DataJSON> {
 
-    return this.httpClient.get<DataJSON>('assets/data.json');
+    return this.httpClient.get<DataJSON>('assets/new-data.json');
   }
 }
