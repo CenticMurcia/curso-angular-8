@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriaComponent implements OnInit {
 
-  private categoria: Categoria;
+  public categoria: Categoria;
 
   constructor(private shareDataService: ShareDataService) { }
 
