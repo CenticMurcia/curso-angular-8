@@ -24,7 +24,6 @@ import { ThreeComponent } from './components/three/three.component';
 import { FourthComponent } from './components/fourth/fourth.component';
 import { ExampleOneFatherComponent } from './components/example-one-father/example-one-father.component';
 import { ExampleOneChildComponent } from './components/example-one-father/example-one-child/example-one-child.component';
-import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { registerLocaleData } from '@angular/common';
 
 import { MaterialModule } from './material.module';
@@ -39,8 +38,7 @@ import { MaterialModule } from './material.module';
     FourthComponent,
     FourthComponent,
     ExampleOneFatherComponent,
-    ExampleOneChildComponent,
-    ReactiveFormComponent
+    ExampleOneChildComponent
   ],
   /** Importamos los modulos de Angular necesarios, incluido los submódulos que creemos nosotros */
   imports: [

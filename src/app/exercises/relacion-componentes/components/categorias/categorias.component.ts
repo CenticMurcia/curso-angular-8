@@ -10,7 +10,7 @@ import { ShareDataService } from '../../services/share-data.service';
 })
 export class CategoriasComponent implements OnInit {
 
-  private categorias: Array<Categoria>;
+  public categorias: Array<Categoria>;
 
   constructor(private categoriasService: CategoriasService, private shareDataService: ShareDataService) { }
 
