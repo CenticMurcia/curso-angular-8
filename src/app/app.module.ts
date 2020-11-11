@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /** Registramos el idioma español por defecto en nuestra app para trabajar con las fechas en castellano,
  * defecto están en inglés
@@ -25,6 +26,8 @@ import { ExampleOneFatherComponent } from './components/example-one-father/examp
 import { ExampleOneChildComponent } from './components/example-one-father/example-one-child/example-one-child.component';
 import { registerLocaleData } from '@angular/common';
 
+import { MaterialModule } from './material.module';
+
 @NgModule({
   /** Aqui declaramos los componentes que vayamos a utilizar */
   declarations: [
@@ -43,7 +46,9 @@ import { registerLocaleData } from '@angular/common';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   /** Cargamos todos los servicios que queramos a utilizar en toda la app y que no tengan el 'provideIn: "root"' */
   providers: [
