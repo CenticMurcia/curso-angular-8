@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubAppComponent implements OnInit {
 
-  private username: string;
+  public username: string;
 
   constructor(private router: Router) { }
 
