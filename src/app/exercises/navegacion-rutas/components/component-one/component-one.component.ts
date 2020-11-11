@@ -9,7 +9,7 @@ import { Location } from '@angular/common';
 })
 export class ComponentOneComponent implements OnInit {
 
-  private username: string;
+  public username: string;
 
   constructor(private activatedRoute: ActivatedRoute, private location: Location) {
     this.activatedRoute.params.subscribe( params => {
