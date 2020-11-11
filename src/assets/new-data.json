@@ -1,0 +1,25 @@
+{
+    "data":[
+        {
+            "name": "historia",
+            "palabras": [
+                {"name": "neolitico", "date": "1555452000000"},
+                {"name": "edad antigua", "date": "1557698400000"}
+            ] 
+        },
+        {
+            "name": "comidas",
+            "palabras": [
+                {"name": "arroz", "date": "1559512800000"},
+                {"name": "patatas", "date": "1559080800000"}
+            ]
+        },
+        {
+            "name": "bebidas",
+            "palabras": [
+                {"name": "agua", "date": "1555452000000"},
+                {"name": "coca-cola", "date": "1554069600000"}
+            ]
+        }
+    ]
+}
