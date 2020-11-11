@@ -1,1 +1,5 @@
-<h4 (click)="showPalabra()">Nombre palabra: {{ item.name }}</h4>
+<div (click)="showPalabra()">
+    <h4>Nombre palabra: {{ item.name }}</h4>
+    <h5>Última actualización: {{ item.date | date:'longDate' }}</h5>
+</div>
+

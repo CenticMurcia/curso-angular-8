@@ -1,6 +1,6 @@
 <p>categorias works!</p>
 
 <div *ngFor="let categoria of categorias; let i = index" class="categoria_{{ i }}" (click)="selectCategoria(categoria)">
-    <h2>Categoría: {{ categoria.name }}</h2>
+    <h2>Categoría: {{ categoria.name | uppercase }}</h2>
     <app-palabra *ngFor="let palabra of categoria.palabras" [item]="palabra" (onShowPalabra)="showPalabra($event)"></app-palabra>
 </div>
