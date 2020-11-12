@@ -1,0 +1,16 @@
+<h2>Login</h2>
+
+<form [formGroup]="reactiveForm" (ngSubmit)="login()">
+    <label for="username">Nombre:</label>
+    <input type="text" formControlName="username">
+    <div *ngIf="reactiveForm.get('username').invalid && reactiveForm.get('username').dirty">
+        <div *ngIf="reactiveForm.get('username').errors.required"> El nombre es obligatorio </div>
+    </div>
+    <label for="pwd">Constraseña:</label>
+    <input type="password" formControlName="pwd">
+    <div *ngIf="reactiveForm.get('pwd').invalid && reactiveForm.get('pwd').dirty">
+        <div *ngIf="reactiveForm.get('pwd').errors.required"> La contraseña es obligatoria </div>
+        <div *ngIf="reactiveForm.get('pwd').errors.minlength"> Contraseña minimo 4 caracteres </div>
+    </div>
+    <button type="submit" [disabled]="!reactiveForm.valid">Entrar</button>
+</form>

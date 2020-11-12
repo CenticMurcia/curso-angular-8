@@ -8,10 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ReactiveFormComponent implements OnInit {
 
-  /**
-   * FormBuilder es otra manera de crear un formulario reactivo como el objeto FormGroup
-   */
-  reactiveForm = this.fb.group({
+  public reactiveForm = this.fb.group({
     nombre: ['', [Validators.required]],
     categoria: ['', [Validators.required, Validators.minLength(4)]]
   });

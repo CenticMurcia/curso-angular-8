@@ -1,0 +1,14 @@
+<h2>Menú navegación Ejercicios</h2>
+
+<ul>
+    <li routerLink="arquitectura">Ejercicio Arquitectura-angular</li>
+    <li (click)="goToComponentOne()">Ejercicio parámetros en la ruta, componentOne</li>
+    <li routerLink="component-two">ComponentTwo</li>
+    <li routerLink="categorias">Ejercicio Categorías</li>
+    <li routerLink="categoria">Categoría</li>
+</ul>
+
+<h5>Username:</h5>
+<input type="text" [(ngModel)]="username">
+
+<router-outlet></router-outlet>

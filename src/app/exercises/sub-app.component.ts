@@ -1,4 +1,3 @@
-import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,15 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubAppComponent implements OnInit {
 
-  private username: string;
-
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  public goToComponentOne(): void {
-    this.router.navigate([`/exercises/component-one/${ this.username }`]);
   }
 
 }
