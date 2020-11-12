@@ -1,14 +1,28 @@
-<h2>Menú navegación Ejercicios</h2>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-list role="list">
+            <mat-list-item role="listitem" routerLink="arquitectura">Ejercicio Arquitectura-angular</mat-list-item>
+            <mat-list-item role="listitem" (click)="goToComponentOne()">Ejercicio parámetros en la ruta, componentOne</mat-list-item>
+            <mat-list-item role="listitem" routerLink="component-two">ComponentTwo</mat-list-item>
+            <mat-list-item role="listitem" routerLink="categorias">Ejercicio Categorías</mat-list-item>
+            <mat-list-item role="listitem" routerLink="categoria">Categoría</mat-list-item>
+        </mat-list>
+    </mat-drawer>
 
-<ul>
-    <li routerLink="arquitectura">Ejercicio Arquitectura-angular</li>
-    <li (click)="goToComponentOne()">Ejercicio parámetros en la ruta, componentOne</li>
-    <li routerLink="component-two">ComponentTwo</li>
-    <li routerLink="categorias">Ejercicio Categorías</li>
-    <li routerLink="categoria">Categoría</li>
-</ul>
+    <div class="example-sidenav-content" style="height: 100%;">
+        <p>
+            <mat-toolbar color="primary">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>Menú navegación Ejercicios</span>
+            </mat-toolbar>
+        </p>
 
-<h5>Username:</h5>
-<input type="text" [(ngModel)]="username">
+        <h5>Username:</h5>
+        <input type="text" [(ngModel)]="username">
 
-<router-outlet></router-outlet>
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>

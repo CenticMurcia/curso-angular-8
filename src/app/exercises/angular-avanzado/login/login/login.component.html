@@ -1,16 +1,28 @@
 <h2>Login</h2>
 
 <form [formGroup]="reactiveForm" (ngSubmit)="login()">
-    <label for="username">Nombre:</label>
-    <input type="text" formControlName="username">
-    <div *ngIf="reactiveForm.get('username').invalid && reactiveForm.get('username').dirty">
-        <div *ngIf="reactiveForm.get('username').errors.required"> El nombre es obligatorio </div>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre:</mat-label>
+            <input matInput placeholder="Nombre" formControlName="username"  name="username">
+            <mat-error *ngIf="reactiveForm.get('username').invalid && reactiveForm.get('username').dirty">
+                <div *ngIf="reactiveForm.get('username').errors.required">Nombre obligatorio</div>
+            </mat-error>
+        </mat-form-field>
     </div>
-    <label for="pwd">Constraseña:</label>
-    <input type="password" formControlName="pwd">
-    <div *ngIf="reactiveForm.get('pwd').invalid && reactiveForm.get('pwd').dirty">
-        <div *ngIf="reactiveForm.get('pwd').errors.required"> La contraseña es obligatoria </div>
-        <div *ngIf="reactiveForm.get('pwd').errors.minlength"> Contraseña minimo 4 caracteres </div>
-    </div>
-    <button type="submit" [disabled]="!reactiveForm.valid">Entrar</button>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Contraseña:</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="pwd" name="pwd">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="reactiveForm.get('pwd').invalid && reactiveForm.get('pwd').dirty">
+            <div *ngIf="reactiveForm.get('pwd').errors.required">Contraseña obligatorio</div>
+            <div *ngIf="reactiveForm.get('pwd').errors.minlength">Contraseña mínima de 4 caractéres</div>
+        </mat-error>
+    </mat-form-field>
+
+    <br>
+    <button type="submit" [disabled]="!reactiveForm.valid" mat-raised-button color="primary">Entrar</button>
 </form>
