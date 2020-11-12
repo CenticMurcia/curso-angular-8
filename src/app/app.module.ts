@@ -27,6 +27,8 @@ import { ExampleOneChildComponent } from './components/example-one-father/exampl
 import { registerLocaleData } from '@angular/common';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
+import { MaterialModule } from './material.module';
+
 @NgModule({
   /** Aqui declaramos los componentes que vayamos a utilizar */
   declarations: [
@@ -47,7 +49,8 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   /** Cargamos todos los servicios que queramos a utilizar en toda la app y que no tengan el 'provideIn: "root"' */
   providers: [
