@@ -1,3 +1,4 @@
+import { FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { v4 as uuidv4 } from 'uuid';
@@ -9,21 +10,25 @@ import { v4 as uuidv4 } from 'uuid';
 })
 export class LoginComponent implements OnInit {
 
-  public username: string;
-  public pwd: string;
+  public reactiveForm = this.fb.group({
+    username: ['', [Validators.required]],
+    pwd: ['', [Validators.required, Validators.minLength(4)]]
+  });
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private fb: FormBuilder) { }
 
   ngOnInit() {
   }
 
   public login(): void {
-    if (this.username.trim().length > 0 && this.pwd.trim().length > 0) {
-      alert('Login realizado correctamente');
+    if (this.reactiveForm.get('username').value.trim().length > 0
+      && this.reactiveForm.get('pwd').value.trim().length > 0) {
 
-      sessionStorage.setItem('appToken', uuidv4());
+        alert('Login realizado correctamente');
 
-      this.router.navigate(['/exercises/dashboard']);
+        sessionStorage.setItem('appToken', uuidv4());
+
+        this.router.navigate(['/exercises/dashboard']);
     }
   }
 
