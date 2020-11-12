@@ -6,6 +6,7 @@ import { SecondComponent } from './components/second/second.component';
 import { ThreeComponent } from './components/three/three.component';
 import { FourthComponent } from './components/fourth/fourth.component';
 import { ExampleOneFatherComponent } from './components/example-one-father/example-one-father.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 /**
  * Objeto con todas las rutas que vamos a crear para nuestra aplicación
@@ -24,6 +25,8 @@ const routes: Routes = [
    */
   { path: 'container', loadChildren: () => import('./components/container/container.module').then((m) => m.ContainerModule)},
   { path: 'dashboard', loadChildren: () => import('./components/dashboard/dashboard.module').then((m) => m.DashboardModule)},
+
+  { path: 'reactive-form', component: ReactiveFormComponent },
 
   // Ruta por defecto donde redirigirá a la que hayamos colocado, importante no olvidar '/' en el nombre de la ruta y 'pathMatch: "full"'
   {path: '', redirectTo: '/first', pathMatch: 'full'},
