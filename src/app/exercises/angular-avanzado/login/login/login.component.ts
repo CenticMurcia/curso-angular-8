@@ -14,10 +14,12 @@ export class LoginComponent implements OnInit {
     username: ['', [Validators.required]],
     pwd: ['', [Validators.required, Validators.minLength(4)]]
   });
+  public hide: boolean;
 
   constructor(private router: Router, private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.hide = true;
   }
 
   public login(): void {
